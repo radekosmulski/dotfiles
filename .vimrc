@@ -22,8 +22,6 @@ Plugin 'https://github.com/slim-template/vim-slim.git'
 Plugin 'https://github.com/tpope/vim-eunuch'
 Plugin 'https://github.com/tpope/vim-unimpaired'
 Plugin 'https://github.com/tpope/vim-cucumber'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'Konfekt/FastFold'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
