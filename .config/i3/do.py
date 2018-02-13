@@ -2,9 +2,6 @@
 
 import i3
 
-with open('/home/radek/potato.txt', 'w') as f:
-    f.write('hi')
-
 outputs = i3.get_outputs()
 workspaces = i3.get_workspaces()
 
