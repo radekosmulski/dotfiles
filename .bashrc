@@ -116,3 +116,4 @@ if ! shopt -oq posix; then
   fi
 fi
 setxkbmap -option caps:ctrl_modifier
+export EDITOR=vim
