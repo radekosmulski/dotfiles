@@ -62,5 +62,11 @@ Thumbs.db
 ##########################
 dump.rdb
 
+# Python #
+##########
+__pycache__
 .ipynb_checkpoints
+
+# File I use with ctags #
+#########################
 .srclist
