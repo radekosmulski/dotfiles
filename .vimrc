@@ -22,7 +22,10 @@ Plugin 'https://github.com/slim-template/vim-slim.git'
 Plugin 'https://github.com/tpope/vim-eunuch'
 Plugin 'https://github.com/tpope/vim-unimpaired'
 Plugin 'https://github.com/tpope/vim-cucumber'
+Plugin 'tmhedberg/SimpylFold'
+Plugin 'Konfekt/FastFold'
 Plugin 'mileszs/ack.vim'
+
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -191,3 +194,8 @@ autocmd Filetype tsv setlocal tabstop=10
 autocmd Filetype tsv setlocal nolist
 
 nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
+
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+
+" disable swap file exists msgs
+set shortmess=A
