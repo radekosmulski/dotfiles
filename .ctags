@@ -1,0 +1,6 @@
+--exclude=.git
+--exclude=node_modules
+--exclude=log
+--exclude=vendor
+--exclude=tmp
+--exclude=legacy 
