@@ -22,6 +22,7 @@ Plugin 'https://github.com/slim-template/vim-slim.git'
 Plugin 'https://github.com/tpope/vim-eunuch'
 Plugin 'https://github.com/tpope/vim-unimpaired'
 Plugin 'https://github.com/tpope/vim-cucumber'
+Plugin 'mileszs/ack.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -139,6 +140,7 @@ noremap <C-s> :w<CR>
 noremap <C-e> :wq<CR>
 map <Leader>x :exec getline(".")<cr>
 map <Leader>e :browse e<cr>
+noremap <C-]> g<C-]>
 
 filetype plugin indent on       " load file type plugins + indentation
 

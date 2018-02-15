@@ -61,3 +61,5 @@ Thumbs.db
 # something redis related #
 ##########################
 dump.rdb
+
+*.ipynb_checkpoints
