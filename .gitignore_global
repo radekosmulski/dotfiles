@@ -62,4 +62,5 @@ Thumbs.db
 ##########################
 dump.rdb
 
-*.ipynb_checkpoints
+.ipynb_checkpoints
+.srclist
