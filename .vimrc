@@ -197,5 +197,7 @@ nnoremap <F5> :<C-U>make %:r && ./%:r<CR>
 
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 
+let g:ctrlp_custom_ignore = 'data\|__pycache__\|\.git'
+
 " disable swap file exists msgs
 set shortmess=A
