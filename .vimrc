@@ -1,3 +1,4 @@
+set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -25,6 +26,9 @@ Plugin 'https://github.com/tpope/vim-cucumber'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'Konfekt/FastFold'
 Plugin 'mileszs/ack.vim'
+Plugin 'https://github.com/tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 
 " The following are examples of different formats supported.
@@ -201,3 +205,5 @@ let g:ctrlp_custom_ignore = 'data\|__pycache__\|\.git'
 
 " disable swap file exists msgs
 set shortmess=A
+
+let g:airline_powerline_fonts = 1
