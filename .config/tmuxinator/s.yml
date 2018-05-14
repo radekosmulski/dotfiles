@@ -47,5 +47,5 @@ windows:
   - jupyter: ./start-jupyter-notebook
   - htop: htop
   - ml_utils: cd superfast/ml_utils && vim
-  - fastai: cd workspace/fastai && vim
+  - fastai: cd workspace/fastai/fastai && vim
   - ml_notebooks: cd superfast/machine_learning_notebooks && vim

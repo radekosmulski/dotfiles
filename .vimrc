@@ -1,3 +1,4 @@
+set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -25,6 +26,9 @@ Plugin 'https://github.com/tpope/vim-cucumber'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'Konfekt/FastFold'
 Plugin 'mileszs/ack.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'tpope/vim-fugitive'
 
 
 " The following are examples of different formats supported.
@@ -203,3 +207,10 @@ let g:ctrlp_custom_ignore = {
 
 " disable swap file exists msgs
 set shortmess=A
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme='minimalist'
+"if !exists('g:airline_symbols')
+    "let g:airline_symbols = {}
+  "endif
+"let g:airline_symbols.space = "\ua0"

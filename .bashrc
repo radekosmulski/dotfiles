@@ -119,3 +119,11 @@ setxkbmap -option caps:ctrl_modifier
 export EDITOR=vim
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# save history across tmux panes
+#   avoid duplicates..
+export HISTCONTROL=ignoredups:erasedups
+#   append history entries..
+shopt -s histappend
+#   After each command, save and reload history
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
