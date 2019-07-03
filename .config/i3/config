@@ -167,7 +167,7 @@ bindsym $mod+Shift+z move container to workspace back_and_forth; workspace back_
 bar {
         mode hide
         hidden_state hide
-        modifier Mod3 #unused by my xmodmap
+        modifier Mod3
 }
 bindsym Mod4+b bar hidden_state show
 bindsym --release Mod4+s bar hidden_state hide
