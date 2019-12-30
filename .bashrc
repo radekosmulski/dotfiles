@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-setxkbmap -option caps:ctrl_modifier
+#setxkbmap -option caps:ctrl_modifier
 export EDITOR=vim
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
