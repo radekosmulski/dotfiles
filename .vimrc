@@ -214,3 +214,5 @@ let g:airline_theme='minimalist'
     "let g:airline_symbols = {}
   "endif
 "let g:airline_symbols.space = "\ua0"
+
+set clipboard^=unnamed,unnamedplus
