@@ -29,6 +29,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
+Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'nikitavoloboev/vim-monokai-night'
 
 
 " The following are examples of different formats supported.
@@ -185,6 +187,8 @@ endfunction
 map <LEADER>f :call FutureShock()<CR>
 
 set t_Co=256
+"colorscheme monokai-night
+"colorscheme dracula
 colorscheme monokai-chris
 
 if has('nvim')
