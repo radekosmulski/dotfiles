@@ -172,7 +172,7 @@ hi CursorLineNr ctermfg=red
 
 " set colorcolumn=80            " not too happy about it as it creates a
                                 " vertical line that is always visible
-autocmd Filetype ruby match ErrorMsg '\%>80v.\+'
+"autocmd Filetype ruby match ErrorMsg '\%>80v.\+'
 
 " highlight and monitor trailing whitespaces
 set listchars=trail:◃,nbsp:•
