@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-#setxkbmap -option caps:ctrl_modifier
+
 export EDITOR=vim
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
@@ -127,3 +127,5 @@ export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 #   After each command, save and reload history
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+setxkbmap -option caps:ctrl_modifier
