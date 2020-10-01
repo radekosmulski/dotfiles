@@ -120,12 +120,29 @@ export EDITOR=vim
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# save history across tmux panes
-#   avoid duplicates..
-export HISTCONTROL=ignoredups:erasedups
-#   append history entries..
-shopt -s histappend
-#   After each command, save and reload history
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+## save history across tmux panes
+##   avoid duplicates..
+#export HISTCONTROL=ignoredups:erasedups
+##   append history entries..
+#shopt -s histappend
+##   After each command, save and reload history
+#export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 setxkbmap -option caps:ctrl_modifier
+
+function os {
+  if [ $# -ne 0 ]; then
+    echo You ran 'os' and probably wanted to run o
+    return
+  fi
+  source /home/radek/workspace/openstack/aiquizzesProjectAdmin_aiquizzesProject-openrc
+  o() {
+    if [[ -z $@ ]]; then
+      command openstack "$@"
+    elif [[ $1 == s ]]; then
+      command openstack server "${@:2}"
+    else
+      command openstack $@
+    fi
+  }
+}

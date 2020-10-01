@@ -72,3 +72,4 @@ __pycache__
 .srclist
 
 data
+node_modules

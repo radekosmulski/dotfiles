@@ -150,6 +150,7 @@ noremap <C-e> :wq<CR>
 map <Leader>x :exec getline(".")<cr>
 map <Leader>e :browse e<cr>
 noremap <C-]> g<C-]>
+imap <C-]> <Esc>:w<CR>
 
 filetype plugin indent on       " load file type plugins + indentation
 
