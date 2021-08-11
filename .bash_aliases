@@ -1,1 +1,0 @@
-alias shutdown='shutdown now'
