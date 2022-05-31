@@ -151,3 +151,9 @@ if [ -f $HOME/.bash_aliases ]
 then
   . $HOME/.bash_aliases
 fi
+
+function rund {
+  IMAGE_NAME=${1:-nvcr.io/nvidia/merlin/merlin-tensorflow-training:22.05}
+  #docker run -it --gpus all --ipc=host -p 8888:8888 --mount src=`pwd`,target=/workspace,type=bind --mount src=/home/radek,target=/raid/data,type=bind,readonly --ulimit memlock=-1 --ulimit stack=67108864 -w /workspace $IMAGE_NAME apt update && install screen && jupyter notebook
+  docker run -it --gpus all --ipc=host -p 8888:8888 --mount src=`pwd`,target=/workspace,type=bind --mount src=/home/radek,target=/raid/data,type=bind,readonly --ulimit memlock=-1 --ulimit stack=67108864 --entrypoint="" -w /workspace $IMAGE_NAME /bin/bash
+}
