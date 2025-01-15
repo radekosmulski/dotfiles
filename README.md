@@ -1,4 +1,4 @@
-## Installation (creating a bare repo to track the ditfiles)
+## Installation (creating a bare repo to track the dotfiles)
 
 ```
 # Create a bare repo
