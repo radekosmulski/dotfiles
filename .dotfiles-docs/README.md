@@ -90,7 +90,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ## TMUX Configuration for Ubuntu
 > Issue: macOS-specific commands breaking tmux on Ubuntu
 
-Remove these macOS-specific lines:
+In `.tmux.conf`, remove these macOS-specific lines:
 ```
 # brew install reattach-to-user-namespace
 set-option -g default-command "reattach-to-user-namespace -l ${SHELL}"
