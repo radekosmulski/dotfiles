@@ -32,7 +32,7 @@ dotfiles push
 
 ```
 # Clone the bare repo
-git clone --bare git@github.com:yourusername/dotfiles.git $HOME/.dotfiles
+git clone --bare git@github.com:radekosmulski/dotfiles.git $HOME/.dotfiles
 
 # Create the alias
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
