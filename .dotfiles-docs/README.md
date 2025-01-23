@@ -102,3 +102,10 @@ Replace with Ubuntu-compatible clipboard setup:
 # Required package: sudo apt install xclip
 bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xclip -selection clipboard"
 ```
+
+To fix issues with not being able to copy in Terminal:
+```
+# use mouse selection to select and <cmd> + c to copy
+# use <alt> + <cmd> + mouse selection to make rectangular selection (in tmux panes)
+set-window-option -g mouse off
+```
