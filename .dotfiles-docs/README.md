@@ -86,3 +86,19 @@ wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforg
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
+
+## TMUX Configuration for Ubuntu
+> Issue: macOS-specific commands breaking tmux on Ubuntu
+
+Remove these macOS-specific lines:
+```
+# brew install reattach-to-user-namespace
+set-option -g default-command "reattach-to-user-namespace -l ${SHELL}"
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+```
+
+Replace with Ubuntu-compatible clipboard setup:
+```
+# Required package: sudo apt install xclip
+bind-key -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "xclip -selection clipboard"
+```
