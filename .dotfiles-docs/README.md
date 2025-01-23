@@ -70,3 +70,10 @@ vim ~/.dotfiles-docs/README.md
 dotfiles add .dotfiles-docs/README.md
 dotfiles commit -m "Add README"
 ```
+
+## Switching to `zsh` on ubuntu server
+
+```
+sudo apt install zsh
+chsh -s $(which zsh)
+```
