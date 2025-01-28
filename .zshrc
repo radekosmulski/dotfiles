@@ -153,4 +153,4 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
 fi
 
 # Check if key is already added
-ssh-add -l | grep -q "github_key" || ssh-add ~/.ssh/id_rsa
+ssh-add -l | grep -q "id_rsa" || ssh-add ~/.ssh/id_rsa
