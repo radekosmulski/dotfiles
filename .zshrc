@@ -141,15 +141,16 @@ if [ -f ~/.secrets ]; then
     source ~/.secrets
 fi
 
-gitpush() {
-    git add .
-    git commit -m "update"
-    git push
-}
-alias gc='gitpush'
+alias gc='git add . && git commit -m "update" && git push'
+alias gd='git add . && git diff'
+alias nbdev_combo='nbdev_prepare && nbdev_bump_version && gc && nbdev_pypi'
 
-gitdiff() {
-    git add .
-    git diff --cached
-}
-alias gd='gitdiff'
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Start agent if not running
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)" > /dev/null
+fi
+
+# Check if key is already added
+ssh-add -l | grep -q "github_key" || ssh-add ~/.ssh/id_rsa
