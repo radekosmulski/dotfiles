@@ -82,6 +82,14 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_TMUX_AUTOSTART=false
 plugins=(git tmux)
 
+# Start agent if not running
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)" > /dev/null
+fi
+
+# Check if key is already added
+ssh-add -l | grep -q "id_rsa" || ssh-add ~/.ssh/id_rsa
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -146,11 +154,3 @@ alias gd='git add . && git diff'
 alias nbdev_combo='nbdev_prepare && nbdev_bump_version && gc && nbdev_pypi'
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
-# Start agent if not running
-if [ -z "$SSH_AUTH_SOCK" ]; then
-    eval "$(ssh-agent -s)" > /dev/null
-fi
-
-# Check if key is already added
-ssh-add -l | grep -q "id_rsa" || ssh-add ~/.ssh/id_rsa
