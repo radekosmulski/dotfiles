@@ -149,8 +149,7 @@ if [ -f ~/.secrets ]; then
     source ~/.secrets
 fi
 
-alias gc='git add . && git commit -m "update" && git push'
-alias gd='git add . && git diff'
-alias nbdev_combo='nbdev_prepare && nbdev_bump_version && gc && nbdev_pypi'
+alias gu='git add . && git commit -m "update" && git push'
+alias nbdev_combo='nbdev_prepare && nbdev_bump_version && gu && nbdev_pypi'
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
